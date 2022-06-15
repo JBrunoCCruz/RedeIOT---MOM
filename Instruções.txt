@@ -1,0 +1,23 @@
+1 - Primeiramente deve ser iniciado o activemq (No windows: activemq.bat start)
+2 - Devem ser iniciados o Instanciador e o Monitor
+	java -jar Instanciador.jar
+	java -jar Monitor.jar
+
+
+3 - No Istanciador
+3.1 - Para criar um sensor, click no checkbox correspondentes, preencha os valores
+    máximos e mínimos, depois clique em instanciar
+3.2 - Para alterar o valor atual do sensor, preencha o checkbox com o valor e clique
+    em Alterar
+3.3 - O nome das filas já estão fixos para cada tipo de sensor
+3.4 - Quando atingidos os limites superiores ou inferiores, uma mensagem
+    de limiteAtingido é enviado para a fila
+
+
+4 - No Monitor
+4.1 - Clique em Atualizar para atualizar a lista de filas existentes
+4.2 - Escolha uma das filas existenes e preencha o campo Nome da fila
+    escrevendo corretamente o nome da fila existente, clique em Monitorar
+4.3 - Quando atigindo algum limite e a mensagem for recebida da fila, 
+    a label correspondente ao sensor que teve o valor em algum limite,
+    e alterada para vermelho
